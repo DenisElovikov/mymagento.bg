@@ -1,0 +1,27 @@
+
+<form action="<?php echo $this->getUrl(); ?>" method="post"
+    <div class="container">
+
+        <label for="firstname" class="required"><?php echo Mage::helper('softuni_contest')->__('First name'); ?>: </label><br>
+            <input type="text" name="firstname" required><br>
+
+        <label for="lastname" class="required"><?php echo Mage::helper('softuni_contest')->__('Last name'); ?>: </label><br>
+            <input type="text" name="lastname" required><br>
+
+        <label for="dob" class="required"><?php echo Mage::helper('softuni_contest')->__('Date of birth'); ?>: </label><br>
+            <input type="date" name="dob" required><br>
+
+        <label for="country" class="required"><?php echo Mage::helper('softuni_contest')->__('Country'); ?>: </label><br>
+            <input type="text" name="country" required><br>
+
+        <label for="city" class="required"><?php echo Mage::helper('softuni_contest')->__('City'); ?>: </label><br>
+            <input type="text" name="city" required><br>
+
+        <label for="massage" class="required"><?php echo Mage::helper('softuni_contest')->__('Message'); ?>: </label><br>
+            <textarea name="message" required></textarea><br>
+
+            <button class="button"><?php echo Mage::helper('softuni_contest')->__('Submit'); ?></button><br>
+    </div>
+</form>
+
+

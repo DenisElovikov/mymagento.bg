@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <softuni_contest_contest_index>
+        <!--<remove name="root"/>-->
+         <reference name="content">
+            <!--<block type="core/template" name="softuni_contest.contest" template="softuni/contest/contest.phtml"></block>-->
+             <block type="softuni_contest/contest" name="softuni_contest.contest" template="softuni/contest/contest.phtml"></block>
+        </reference>
+    </softuni_contest_contest_index>
+</layout>

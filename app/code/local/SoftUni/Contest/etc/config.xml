@@ -36,5 +36,30 @@
                 </setup>
             </softuni_contest_setup>
         </resources>
+        <blocks>
+            <softuni_contest>
+                <class>SoftUni_Contest_Block</class>
+            </softuni_contest>
+        </blocks>
     </global>
+
+    <frontend>
+        <routers>
+            <softuni_contest>
+                <use>standard</use>
+                <args>
+                    <module>SoftUni_Contest</module>
+                    <frontName>softuni_contest</frontName>
+                </args>
+            </softuni_contest>
+        </routers>
+        <layout>
+            <updates>
+                <softuni_contest module="SoftUni_Contest">
+                    <file>softuni_contest.xml</file>
+                    <!--TODO можно создать в отдельной папке softuni/softuni_contest.xml-->
+                </softuni_contest>
+            </updates>
+        </layout>
+    </frontend>
 </config>
