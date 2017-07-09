@@ -62,4 +62,38 @@
             </updates>
         </layout>
     </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <softuni_contest before="Mage_Adminhtml">SoftUni_Contest</softuni_contest>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <SoftUni_Contest>
+                    <files>
+                        <defaul>SoftUni_Contest.cvs</defaul>
+                    </files>
+                </SoftUni_Contest>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <softuni_contest module="softuni_contest">
+                    <file>softuni_contest.xml</file>
+                </softuni_contest>
+                <softuni_contestant module="softuni_contest">
+                    <file>softuni_contestant.xml</file>
+                </softuni_contestant>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

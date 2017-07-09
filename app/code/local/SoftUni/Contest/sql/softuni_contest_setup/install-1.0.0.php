@@ -57,8 +57,6 @@ $table = $installer->getConnection()
     ), 'Contest Id')
     ->addColumn('title', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array(
     ), 'Title')
-    ->addColumn('description', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array(
-    ), 'Description')
     ->addColumn('is_active', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
         'unsigned' => true,
         'default'   => '1',
