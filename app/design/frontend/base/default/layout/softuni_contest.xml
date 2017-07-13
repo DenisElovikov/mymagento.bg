@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <softuni_contest_contest_index>
+    <softuni_contest_list_index>
         <reference name="content">
-            <block type="softuni_contest/contest" name="softuni_contest.contest" template="softuni/contest/.phtml"/>
+            <block type="softuni_contest/list" name="softuni_contest.contest.list" template="softuni/contest/list.phtml"/>
         </reference>
-    </softuni_contest_contest_index>
+    </softuni_contest_list_index>
     
-    <softuni_contest_contestant_index>
+    <softuni_contest_add_form>
+        <!--<remove name="root"/>-->
         <reference name="content">
-            <block type="softuni_contest/contest" name="softuni_contest.contestant" template="softuni/contest/.phtml"/>
+            <block type="softuni_contest/add" name="softuni_contest.list.add" template="softuni/contest/add.phtml"/>
         </reference>
-    </softuni_contest_contestant_index>
+    </softuni_contest_add_form>
 </layout>
+

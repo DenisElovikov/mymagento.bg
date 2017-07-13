@@ -1,0 +1,39 @@
+<?php $contestTitle = $this->getApprovedContestsTitle(); ?>
+
+
+<h1><?php echo $contestTitle[0]['title'] ?></h1>
+<h3><?php echo $this->__('Add Contestant')?></h3>
+
+<?php //echo '<pre>';print_r($contestTitle);echo '</pre>'?>
+
+<form>
+<div class="container">
+    <div class="form-group">
+        <label for="firstname" class="required"><?php echo Mage::helper('softuni_contest')->__('First name'); ?>: </label><br>
+        <input type="text" name="firstname" required><br>
+    </div>
+    <div class="form-group">
+        <label for="lastname" class="required"><?php echo Mage::helper('softuni_contest')->__('Last name'); ?>: </label><br>
+        <input type="text" class="form-control" name="lastname" required><br>
+    </div>
+        <div class="form-group">
+        <label for="dob" class="required"><?php echo Mage::helper('softuni_contest')->__('Date of birth'); ?>: </label><br>
+        <input type="date" class="form-control" name="dob" required><br>
+    </div>
+    <div class="form-group">
+        <label for="country" class="required"><?php echo Mage::helper('softuni_contest')->__('Country'); ?>: </label><br>
+        <input type="text" class="form-control" name="country" required><br>
+    </div>
+    <div class="form-group">
+        <label for="city" class="required"><?php echo Mage::helper('softuni_contest')->__('City'); ?>: </label><br>
+        <input type="text" class="form-control" name="city" required><br>
+    </div>
+    <div class="form-group">
+        <label for="massage" class="required"><?php echo Mage::helper('softuni_contest')->__('Message'); ?>: </label><br>
+        <textarea name="message" class="form-control" required></textarea><br>
+    </div>
+    <button type="button" class="button"><?php echo Mage::helper('softuni_contest')->__('Submit'); ?></button><br>
+</div>
+</form>
+
+

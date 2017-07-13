@@ -1,0 +1,42 @@
+<?php
+$allContests = $this->getApprovedContests();
+$approvedContestants = $this->getApprovedContestants();
+?>
+
+<?php foreach($allContests as $contest): ?>
+<!--    --><?php //echo '<pre>';print_r($contest);echo '</pre>'?>
+
+    <div>
+    <h1><?php echo $this->escapeHtml($contest->getTitle()) ?></h1>
+    <h6>
+        <a href="<?php echo Mage::getUrl('softuni_contest/add/form', array('contest_id' => $contest->getContest_id())) ?>">
+            <?php echo $this->__('Add contestant for '.$this->escapeHtml($contest->getTitle()))?>
+        </a>
+    </h6>
+    <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Country</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <?php foreach($approvedContestants as $contestant): ?>
+                <?php if ($contestant['contest_id'] == $contest->getContest_id() ): ?>
+                    <tr>
+    <!--                    --><?php //echo '<pre>';print_r($contestant);echo '</pre>'?>
+                        <td><?php echo $this->escapeHtml(($contestant['firstname'])) ?></td>
+                        <td><?php echo $this->escapeHtml((mb_substr($contestant['lastname'], 0, 1))) ?></td>
+                        <td><?php echo $this->escapeHtml(($contestant['country'])) ?></td>
+                        <td><?php echo $this->escapeHtml(($contestant['city'])) ?></td>
+                    </tr>
+                <?endif;?>
+            <?php endforeach; ?>
+                </tbody>
+            </table>
+    </div>
+</div>
+<?php endforeach; ?>
