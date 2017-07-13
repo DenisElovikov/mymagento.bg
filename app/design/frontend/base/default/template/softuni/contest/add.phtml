@@ -1,4 +1,5 @@
 <?php $contestTitle = $this->getApprovedContestsTitle(); ?>
+<?php $contestId = $this->getContestId(); ?>
 
 
 <h1><?php echo $contestTitle[0]['title'] ?></h1>
@@ -6,34 +7,45 @@
 
 <?php //echo '<pre>';print_r($contestTitle);echo '</pre>'?>
 
-<form>
-<div class="container">
+<form id="my-custom-form" action="<?php echo $this->getActionUrl() ?>" method="post">
+<!--<form action="--><?php //echo $this->getUrl('softuni_contest/add/post')?><!--" method="post">-->
+    <div class="form-group">
+        <input type="hidden" name="contest-id" value="<?php echo $contestId?>" readonly>
+    </div>
     <div class="form-group">
         <label for="firstname" class="required"><?php echo Mage::helper('softuni_contest')->__('First name'); ?>: </label><br>
-        <input type="text" name="firstname" required><br>
+        <input type="text" class="form-control required-entry" name="firstname" required><br>
     </div>
     <div class="form-group">
         <label for="lastname" class="required"><?php echo Mage::helper('softuni_contest')->__('Last name'); ?>: </label><br>
-        <input type="text" class="form-control" name="lastname" required><br>
+        <input type="text" class="form-control required-entry" name="lastname" required><br>
     </div>
         <div class="form-group">
         <label for="dob" class="required"><?php echo Mage::helper('softuni_contest')->__('Date of birth'); ?>: </label><br>
-        <input type="date" class="form-control" name="dob" required><br>
+        <input type="date" class="form-control required-entry" name="dob" required><br>
     </div>
     <div class="form-group">
         <label for="country" class="required"><?php echo Mage::helper('softuni_contest')->__('Country'); ?>: </label><br>
-        <input type="text" class="form-control" name="country" required><br>
+        <input type="text" class="form-control required-entry" name="country" required><br>
     </div>
     <div class="form-group">
         <label for="city" class="required"><?php echo Mage::helper('softuni_contest')->__('City'); ?>: </label><br>
-        <input type="text" class="form-control" name="city" required><br>
+        <input type="text" class="form-control required-entry" name="city" required><br>
     </div>
     <div class="form-group">
         <label for="massage" class="required"><?php echo Mage::helper('softuni_contest')->__('Message'); ?>: </label><br>
-        <textarea name="message" class="form-control" required></textarea><br>
+        <textarea name="message" class="form-control required-entry" required></textarea><br>
     </div>
-    <button type="button" class="button"><?php echo Mage::helper('softuni_contest')->__('Submit'); ?></button><br>
-</div>
+
+    <button type="submit" class="button"><?php echo Mage::helper('softuni_contest')->__('Submit'); ?></button><br>
+
 </form>
+
+//http://inchoo.net/magento/out-of-the-box-form-validation-in-magento/
+<script type="text/javascript">
+    //< ![CDATA[
+    var customForm = new VarienForm('my-custom-form');
+    //]]>
+</script>
 
 

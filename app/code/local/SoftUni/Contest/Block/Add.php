@@ -2,6 +2,12 @@
 
 class SoftUni_Contest_Block_Add extends Mage_Core_Block_Template
 {
+    public function getContestId()
+    {
+        $contestId = $this->getRequest()->getParam('contest_id');
+
+        return $contestId;
+    }
 
     public function getApprovedContestsTitle()
     {
@@ -31,5 +37,7 @@ class SoftUni_Contest_Block_Add extends Mage_Core_Block_Template
         return $contestTitleArr;
     }
     public function getActionUrl()
-    {}
+    {
+        return $this->getUrl('softuni_contest/add/post');
+    }
 }
