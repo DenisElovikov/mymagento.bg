@@ -2,8 +2,8 @@
 <?php $contestId = $this->getContestId(); ?>
 
 
-<h1><?php echo $contestTitle[0]['title'] ?></h1>
-<h3><?php echo $this->__('Add Contestant')?></h3>
+<h1><?php echo Mage::helper('softuni_contest')->__($contestTitle[0]['title']); ?></h1>
+<h3><?php echo Mage::helper('softuni_contest')->__('Add Contestant'); ?></h3>
 
 <?php //echo '<pre>';print_r($contestTitle);echo '</pre>'?>
 
@@ -13,11 +13,11 @@
         <input type="hidden" name="contest-id" value="<?php echo $contestId?>" readonly>
     </div>
     <div class="form-group">
-        <label for="firstname" class="required"><?php echo Mage::helper('softuni_contest')->__('First name'); ?>: </label><br>
+        <label for="firstname" class="required"><?php echo Mage::helper('softuni_contest')->__('Firstname'); ?>: </label><br>
         <input type="text" class="form-control required-entry" name="firstname" required><br>
     </div>
     <div class="form-group">
-        <label for="lastname" class="required"><?php echo Mage::helper('softuni_contest')->__('Last name'); ?>: </label><br>
+        <label for="lastname" class="required"><?php echo Mage::helper('softuni_contest')->__('Lastname'); ?>: </label><br>
         <input type="text" class="form-control required-entry" name="lastname" required><br>
     </div>
         <div class="form-group">
@@ -41,7 +41,7 @@
 
 </form>
 
-//http://inchoo.net/magento/out-of-the-box-form-validation-in-magento/
+<!--http://inchoo.net/magento/out-of-the-box-form-validation-in-magento/-->
 <script type="text/javascript">
     //< ![CDATA[
     var customForm = new VarienForm('my-custom-form');

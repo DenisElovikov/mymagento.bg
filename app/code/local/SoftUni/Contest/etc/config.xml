@@ -61,6 +61,15 @@
                 </softuni_contest>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <SoftUni_Contest>
+                    <files>
+                        <defaul>Softuni_Contest.csv</defaul>
+                    </files>
+                </SoftUni_Contest>
+            </modules>
+        </translate>
     </frontend>
 
     <admin>
@@ -80,7 +89,7 @@
             <modules>
                 <SoftUni_Contest>
                     <files>
-                        <defaul>SoftUni_Contest.cvs</defaul>
+                        <defaul>Softuni_Contest.csv</defaul>
                     </files>
                 </SoftUni_Contest>
             </modules>

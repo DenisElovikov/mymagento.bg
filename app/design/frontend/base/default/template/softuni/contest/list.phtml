@@ -5,22 +5,25 @@ $approvedContestants = $this->getApprovedContestants();
 
 <?php foreach($allContests as $contest): ?>
 <!--    --><?php //echo '<pre>';print_r($contest);echo '</pre>'?>
-
-    <div>
-    <h1><?php echo $this->escapeHtml($contest->getTitle()) ?></h1>
+    <?php $contestName = $this->escapeHtml($contest->getTitle()); ?>
+<div>
+    <h1><?php echo Mage::helper('softuni_contest')->__($contestName); ?></h1>
+<!--    <h1>--><?php //echo $this->escapeHtml($contest->getTitle()) ?><!--</h1>-->
     <h6>
         <a href="<?php echo Mage::getUrl('softuni_contest/add/form', array('contest_id' => $contest->getContest_id())) ?>">
-            <?php echo $this->__('Add contestant for '.$this->escapeHtml($contest->getTitle()))?>
+            <?php echo Mage::helper('softuni_contest')->__('Add contestant for '); ?>
+            <?php echo Mage::helper('softuni_contest')->__($contestName); ?>
+<!--            --><?php //echo $this->__('Add contestant for '.$this->escapeHtml($contest->getTitle()))?>
         </a>
     </h6>
     <div class="container">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Country</th>
-                        <th>City</th>
+                        <th><?php echo Mage::helper('softuni_contest')->__('Firstname'); ?></th>
+                        <th><?php echo Mage::helper('softuni_contest')->__('Lastname'); ?></th>
+                        <th><?php echo Mage::helper('softuni_contest')->__('Country'); ?></th>
+                        <th><?php echo Mage::helper('softuni_contest')->__('City'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
