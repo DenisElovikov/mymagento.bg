@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <softuni_statistics_statistics_index>
+        <!--<remove name="root"/>-->
+        <reference name="content">
+            <!--<block type="core/template" name="softuni_statistics.statistics" template="softuni/statistics/statistics.phtml"/>-->
+            <block type="softuni_statistics/statistics" name="softuni_statistics.statistics" template="softuni/statistics/statistics.phtml"/>
+        </reference>
+    </softuni_statistics_statistics_index>
+    
+    <!--<softuni_contest_add_form>-->
+        <!--&lt;!&ndash;<remove name="root"/>&ndash;&gt;-->
+        <!--<reference name="content">-->
+            <!--<block type="softuni_contest/add" name="softuni_contest.list.add" template="softuni/contest/add.phtml"/>-->
+        <!--</reference>-->
+    <!--</softuni_contest_add_form>-->
+</layout>
+

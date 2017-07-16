@@ -32,7 +32,7 @@ $approvedContestants = $this->getApprovedContestants();
                     <tr>
     <!--                    --><?php //echo '<pre>';print_r($contestant);echo '</pre>'?>
                         <td><?php echo $this->escapeHtml(($contestant['firstname'])) ?></td>
-                        <td><?php echo $this->escapeHtml((mb_substr($contestant['lastname'], 0, 1))) ?></td>
+                        <td><strong style="color: red"><?php echo $this->escapeHtml((mb_substr($contestant['lastname'], 0, 1))) ?></strong></td>
                         <td><?php echo $this->escapeHtml(($contestant['country'])) ?></td>
                         <td><?php echo $this->escapeHtml(($contestant['city'])) ?></td>
                     </tr>

@@ -7,8 +7,7 @@
 
 <?php //echo '<pre>';print_r($contestTitle);echo '</pre>'?>
 
-<form id="my-custom-form" action="<?php echo $this->getActionUrl() ?>" method="post">
-<!--<form action="--><?php //echo $this->getUrl('softuni_contest/add/post')?><!--" method="post">-->
+<form id="my-add-form" action="<?php echo $this->getActionUrl() ?>" method="post">
     <div class="form-group">
         <input type="hidden" name="contest-id" value="<?php echo $contestId?>" readonly>
     </div>
@@ -44,7 +43,7 @@
 <!--http://inchoo.net/magento/out-of-the-box-form-validation-in-magento/-->
 <script type="text/javascript">
     //< ![CDATA[
-    var customForm = new VarienForm('my-custom-form');
+    var customForm = new VarienForm('my-add-form');
     //]]>
 </script>
 

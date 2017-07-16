@@ -1,0 +1,31 @@
+<?php
+$statistics['ordersCompleted'] = Mage::getModel('sales/order')
+    ->getCollection()
+    ->addFieldToFilter('state', Mage_Sales_Model_Order::STATE_COMPLETE)
+    ->count();
+
+$statistics['ordersIcompleted'] = Mage::getModel('sales/order')
+    ->getCollection()
+    ->addFieldToFilter('state', array('neq' => Mage_Sales_Model_Order::STATE_COMPLETE))
+    ->count();
+
+$statistics['activeProducts'] = Mage::getModel('catalog/product')
+    ->getCollection()
+    ->addFieldToFilter('status', array('eq' => 1))
+    ->count();
+?>
+
+<table>
+    <thead>
+        <th><?php echo Mage::helper('softuni_statistics')->__('Completed Orders') ?></th>
+        <th><?php echo Mage::helper('softuni_statistics')->__('Inomplete Orders') ?></th>
+        <th><?php echo Mage::helper('softuni_statistics')->__('Active Products') ?></th>
+    </thead>
+    <tbody>
+    <tr>
+        <td><?php echo $statistics['ordersCompleted']?></td>
+        <td><?php echo $statistics['ordersIcompleted']?></td>
+        <td><?php echo $statistics['activeProducts']?></td>
+    </tr>
+    </tbody>
+</table>
