@@ -58,6 +58,7 @@ class SoftUni_Contest_Block_Adminhtml_Contest_Edit_Form extends Mage_Adminhtml_B
                 '0' => Mage::helper('softuni_contest')->__('Disabled'),
             ),
         ));
+
         
         $form->setValues($model->getData());
         $form->setUseContainer(true);

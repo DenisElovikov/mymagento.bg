@@ -1,18 +1,26 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="customer">
+                <name>statistics</name>
+                <path>softuni_statistics/statistics/index</path>
+                <label>Sofftuni Statistics</label>
+            </action>
+        </reference>
+        <!--<remove name="left.newsletter"/>-->
+    </customer_account>
+
     <softuni_statistics_statistics_index>
         <!--<remove name="root"/>-->
+
+        <update handle="customer_account"/>
+
         <reference name="content">
-            <!--<block type="core/template" name="softuni_statistics.statistics" template="softuni/statistics/statistics.phtml"/>-->
             <block type="softuni_statistics/statistics" name="softuni_statistics.statistics" template="softuni/statistics/statistics.phtml"/>
         </reference>
     </softuni_statistics_statistics_index>
-    
-    <!--<softuni_contest_add_form>-->
-        <!--&lt;!&ndash;<remove name="root"/>&ndash;&gt;-->
-        <!--<reference name="content">-->
-            <!--<block type="softuni_contest/add" name="softuni_contest.list.add" template="softuni/contest/add.phtml"/>-->
-        <!--</reference>-->
-    <!--</softuni_contest_add_form>-->
+
 </layout>
 

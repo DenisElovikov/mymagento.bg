@@ -36,15 +36,15 @@
                 </softuni_statistics>
             </updates>
         </layout>
-        <!--<translate>-->
-            <!--<modules>-->
-                <!--<SoftUni_Contest>-->
-                    <!--<files>-->
-                        <!--<defaul>Softuni_Contest.csv</defaul>-->
-                    <!--</files>-->
-                <!--</SoftUni_Contest>-->
-            <!--</modules>-->
-        <!--</translate>-->
+        <translate>
+            <modules>
+                <SoftUni_Statistics>
+                    <files>
+                        <defaul>Softuni_Statistics.csv</defaul>
+                    </files>
+                </SoftUni_Statistics>
+            </modules>
+        </translate>
     </frontend>
 
     <!--<admin>-->

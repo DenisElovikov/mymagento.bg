@@ -19,7 +19,6 @@ class SoftUni_Contest_Block_List extends Mage_Core_Block_Template
     {
         $contestants = Mage::getModel('softuni_contest/contestant')
             ->getCollection()
-            ->addFieldToSelect(array('contest_id', 'firstname', 'lastname', 'country', 'city', 'approved'))
             ->addFieldToFilter('approved', array(
                 'eq' => '1'
             )
